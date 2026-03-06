@@ -33,7 +33,12 @@ def mainMenu():
                 ip = input("Enter the computer's IP address: ").strip()
                 ip_parts = ip.split(".")
 
-            year = int(input("Enter the year of purchase: "))
+            while True:
+                try:
+                    year = int(input("Enter the year of purchase: "))
+                    break
+                except ValueError:
+                    print("Please enter a valid year.")
 
             # Loop until valid OS is entered
             while True:
